@@ -4,10 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pendaftaran</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylee.css">
 </head>
 
 <body>
-    
+
+    <header>
+        <h1>Tech Community</h1>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="form.html">Pendaftaran</a>
+            <a href="gallery.html">Multimedia</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Formulir Pendaftaran Anggota</h2>
+        <p>Silakan lengkapi data diri Anda pada form di bawah ini untuk bergabung.</p>
+        
+        <form id="formAnggota" onsubmit="handleForm(event)">
+            <div class="form-group">
+                <label for="nama">Nama Lengkap:</label>
+                <input type="text" id="nama" name="nama" required placeholder="Contoh: Meilan Ulfia">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Alamat Email:</label>
+                <input type="email" id="email" name="email" required placeholder="email@student.ac.id">
+            </div>
+
+            <div class="form-group">
+                <label for="minat">Bidang Minat:</label>
+                <select id="minat" name="minat" required>
+                    <option value="" disabled selected>-- Pilih Bidang Minat --</option>
+                    <option value="Web Development">Web Development</option>
+                    <option value="Cybersecurity">Cybersecurity</option>
+                    <option value="Software Quality Assurance">Software Quality Assurance</option>
+                    <option value="Data Science">Data Science</option>
+                </select>
+            </div>
+
+            <button type="submit">Submit Data</button>
+        </form>
+
+        <div id="result">
+            </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
