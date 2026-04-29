@@ -4,9 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeri Foto</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylee.css">
 </head>
 <body>
-    
+
+     <header>
+        <h1>Tech Community</h1>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="form.html">Pendaftaran</a>
+            <a href="gallery.html">Multimedia</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Galeri & Multimedia</h2>
+        <p>Kumpulan dokumentasi, materi audio, dan video terkait kegiatan Tech Community.</p>
+        
+       <div class="media-section">
+            <h3>Dokumentasi Kegiatan</h3>
+            <img id="myImage" src="coding.jpg" alt="Kegiatan Komunitas IT" width="500">
+            <br><br>
+            <button class="btn-secondary" onclick="changeImage()">Ubah Gambar</button>
+        </div>
+
+        <hr>
+
+        <div class="media-section">
+            <h3>Podcast Komunitas</h3>
+            <audio id="myAudio" controls>
+                <source src="instrument.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung elemen tag audio.
+            </audio>
+            <div class="audio-controls">
+                <button class="btn-secondary" onclick="playAudio()">Play</button>
+                <button class="btn-secondary" onclick="pauseAudio()">Pause</button>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="media-section">
+            <h3>Video Materi Pilihan</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fGnnE0HeQFM" title="Belajar Bersama" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
